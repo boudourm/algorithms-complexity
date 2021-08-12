@@ -1,0 +1,73 @@
+\\ module principal
+
+fonction algorithme1(n:entier) : booléen
+    i,diviseurs : entier;
+début
+    diviseurs := 0;
+    pour i = 2 jusqu'à n-1 faire
+        si ( n mod i = 0 ) alors
+            diviseurs := diviseur + 1 ; 
+        fin si;
+    fin pour;
+    retourner (diviseurs = 0);
+fin;
+
+\\ t(n) = 1+ (n-1 -2 +1 ) +1 = n = o(n)
+
+fonction algorithme2(n:entier) : booléen
+    i,diviseurs : entier;
+début
+    diviseurs := 0;
+    pour i = 2 jusqu'à n/2 faire
+        si ( n mod i = 0 ) alors
+            diviseurs := diviseur + 1 ; 
+        fin si;
+    fin pour;
+    retourner (diviseurs = 0);
+fin;
+
+\\ t(n) = 1+ (n/2 -2 +1 ) +1 = n/2 +1 = o(n)
+
+fonction algorithme3(n:entier) : booléen
+    i,diviseurs : entier;
+début
+    diviseurs := 0;
+    pour i = 2 jusqu'à sqrt(n) faire 
+        si ( n mod i = 0 ) alors
+            diviseurs := diviseur + 1 ; 
+        fin si;
+    fin pour;
+    retourner (diviseurs = 0);
+fin;
+
+\\ t(n) = 1+ (sqrt(n) -2 +1 ) +1 = sqrt(n) +1 = o(sqrt(n))
+
+fonction algorithme4(n:entier) : booléen
+    i,diviseurs : entier;
+début
+    diviseurs := 0;
+    si (n mod 2 = 0) alors retourner (faux)
+    sinon
+
+        i := 3;
+        tant que (i<=sqrt(n)) faire
+            si ( n mod i = 0 ) alors
+                diviseurs := diviseur + 1 ; 
+            fin si;
+            i := i+2;
+        fin tant que;
+
+    fin si;
+
+    retourner (diviseurs = 0);
+fin;
+
+\\ t(n) = 1+ (sqrt(n) -3 +1 )/2 +1 = (1/2)*sqrt(n) +1 = o(sqrt(n))
+
+
+sommme
+prim
+recherche
+sous matrice
+
+

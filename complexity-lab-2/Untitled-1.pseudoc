@@ -1,0 +1,20 @@
+FONCTION rechElets_TabNonTries(T:TABLEAU D'ENTIER,N:ENTIER,X:ENTIER) : ENTIER
+         I: ENTIER;
+DEBUT    
+    POUR I = 1 JUSQU'A N FAIRE
+        SI (T[i]==x) ALORS
+            RETOURNER (I);  
+        FIN SI; 
+    FIN POUR;
+    RETOURNER (-1);
+FIN;
+FONCTION rechElets_TabNonTries(T:TABLEAU D'ENTIER,N:ENTIER,X:ENTIER) : ENTIER
+    I: ENTIER;
+DEBUT
+    POUR I = 2 JUSQU'A N-1 FAIRE
+        SI ( N MOD I = 0 ) ALORS
+            RETOURNER (FAUX);                   
+        FIN SI; 
+    FIN POUR;
+    RETOURNER (VRAI);
+FIN;
